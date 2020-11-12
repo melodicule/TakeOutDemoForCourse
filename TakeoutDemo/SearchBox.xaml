@@ -1,0 +1,92 @@
+﻿<Page
+    x:Class="TakeoutDemo.SearchBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TakeoutDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="White" FontSize="20"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" Grid.Row="0">
+            <Grid Height="70" Background="DodgerBlue" Padding="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Tapped="BackToHome_Tapped" Background="Transparent" PointerPressed="Border_PointerPressed">
+                    <TextBlock x:Name="iconBack" Grid.Column="0" FontFamily="Segoe MDL2 Assets" Text="&#xE72B;" Foreground="WhiteSmoke" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+                
+                <Border Grid.Column="1" CornerRadius="20" Background="White" Margin="5">
+                    <Grid Padding="10,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Background="Transparent" Foreground="Black" PlaceholderText="辣子鸡" PlaceholderForeground="LightGray" BorderThickness="0" FontSize="18" VerticalAlignment="Center"/>
+                        <SymbolIcon Grid.Column="1" Foreground="DodgerBlue" Symbol="Find"/>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <TextBlock Text="搜索发现" Foreground="Black" Margin="10,20,20,0"/>
+            <controls:WrapPanel >
+                <controls:WrapPanel.Children>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                        <TextBlock Text="老妈烫饭" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                        <TextBlock Text="汉堡" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                        <TextBlock Text="重庆小面" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                        <TextBlock Text="浙江工业大学" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10">
+                        <TextBlock Text="荷叶饭" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10">
+                        <TextBlock Text="肯德基宅急送" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10">
+                        <TextBlock Text="老爹炒饭" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+
+                </controls:WrapPanel.Children>
+            </controls:WrapPanel>
+
+            <TextBlock Text="搜索记录" Foreground="Black" Margin="10,20,20,0"/>
+            <controls:WrapPanel >
+                <controls:WrapPanel.Children>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                        <TextBlock Text="老妈烫饭" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                        <TextBlock Text="汉堡" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                        <TextBlock Text="重庆小面" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                        <TextBlock Text="浙江工业大学" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10">
+                        <TextBlock Text="荷叶饭" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10">
+                        <TextBlock Text="肯德基宅急送" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10">
+                        <TextBlock Text="老爹炒饭" Foreground="DimGray" FontSize="14"/>
+                    </Border>
+
+                </controls:WrapPanel.Children>
+            </controls:WrapPanel>
+        </StackPanel>
+    </Grid>
+</Page>
