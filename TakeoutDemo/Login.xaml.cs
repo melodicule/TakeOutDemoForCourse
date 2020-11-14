@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
@@ -24,6 +25,26 @@ namespace TakeoutDemo
     /// </summary>
     public sealed partial class Login : Page
     {
+        string _name = string.Empty;
+        string _pswd = string.Empty;
+        public string UserName 
+        {
+            get => _name;
+            set
+            {
+                _name = value;
+                Check();
+            }
+        }
+        public string Password
+        {
+            get => _pswd;
+            set
+            {
+                _pswd = value;
+                Check();
+            }
+        }
         public Login()
         {
             this.InitializeComponent();
@@ -40,6 +61,36 @@ namespace TakeoutDemo
             iconBack.Foreground = new SolidColorBrush(Colors.LightSkyBlue);
             await Task.Delay(100);
             iconBack.Foreground = new SolidColorBrush(Colors.White);
+        }
+
+        private async void Login_Click(object sender, RoutedEventArgs e)
+        {
+            if (User.Check(App.UserDatabase, UserName, Password))
+            {
+                App.IsLogined = true;
+                App.User = App.UserDatabase[UserName];
+                Frame.GoBack();
+            }
+            else
+            {
+                ContentDialog dialog = new ContentDialog
+                {
+                    Title = "用户名或密码错误",
+                    Content = "请输入正确的用户名和密码",
+                    CloseButtonText = "我知道了"
+                };
+                _ = await dialog.ShowAsync();
+            }
+        }
+
+        private void SignUp_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SignUp));
+        }
+
+        private void Check()
+        {
+            btLogin.IsEnabled = !string.IsNullOrWhiteSpace(_name) && _pswd.Length >= 6;
         }
     }
 }

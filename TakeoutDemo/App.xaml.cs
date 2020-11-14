@@ -22,6 +22,10 @@ namespace TakeoutDemo
     /// </summary>
     sealed partial class App : Application
     {
+        public static bool IsLogined { get; set; } = false;
+        public static User User { get; set; }
+        static Dictionary<string, User> userDatabase = new Dictionary<string, User>();
+        public static Dictionary<string, User> UserDatabase { get => userDatabase; }
         /// <summary>
         /// 初始化单一实例应用程序对象。这是执行的创作代码的第一行，
         /// 已执行，逻辑上等同于 main() 或 WinMain()。

@@ -42,8 +42,8 @@
         <TextBox Grid.Row="3"  Margin="30, 10" Name="inputUid" Height="auto" PlaceholderText="用户名" FontSize="20" VerticalContentAlignment="Center" />
         <PasswordBox Grid.Row="4" Margin="30, 10" Name="inputPasw" Background="Transparent" PlaceholderText="密码" FontSize="20" VerticalContentAlignment="Center"/>
         <PasswordBox Grid.Row="5" Margin="30, 10" Name="inputPaswConfirm" Background="Transparent" PlaceholderText="确认密码" FontSize="20" VerticalContentAlignment="Center"/>
-        <PasswordBox Grid.Row="6" Margin="30, 10" Name="inputPhone" Background="Transparent" PlaceholderText="手机号" FontSize="20" VerticalContentAlignment="Center"/>
+        <TextBox Grid.Row="6" Margin="30, 10" Name="inputPhone" Background="Transparent" PlaceholderText="手机号" FontSize="20" VerticalContentAlignment="Center"/>
 
-        <Button Content="注册" Grid.Row="7" FontSize="20" Width="150" HorizontalAlignment="Center"/>
+        <Button Content="注册" Grid.Row="7" FontSize="20" Width="150" HorizontalAlignment="Center" Click="SignUp_Click"/>
     </Grid>
 </Page>

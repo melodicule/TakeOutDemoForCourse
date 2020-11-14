@@ -38,7 +38,6 @@ namespace TakeoutDemo
 
 
 
-
         private void TabSwitch_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Grid grid = sender as Grid;
@@ -76,7 +75,12 @@ namespace TakeoutDemo
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             MainFrame = Frame;
-            pages.Navigate(typeof(HomePage));
+            if (currentPage == 0)
+            {
+                pages.Navigate(typeof(HomePage));
+            }
         }
+
+
     }
 }

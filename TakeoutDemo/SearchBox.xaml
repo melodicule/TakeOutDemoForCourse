@@ -26,8 +26,8 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
-                        <TextBox Background="Transparent" Foreground="Black" PlaceholderText="辣子鸡" PlaceholderForeground="LightGray" BorderThickness="0" FontSize="18" VerticalAlignment="Center"/>
-                        <SymbolIcon Grid.Column="1" Foreground="DodgerBlue" Symbol="Find"/>
+                        <TextBox Background="Transparent" Foreground="Black" PlaceholderText="辣子鸡" PlaceholderForeground="LightGray" BorderThickness="0" FontSize="18" VerticalAlignment="Center" Name="tbWord"/>
+                        <SymbolIcon Grid.Column="1" Foreground="DodgerBlue" Symbol="Find" Tapped="SymbolIcon_Tapped"/>
                     </Grid>
                 </Border>
             </Grid>
@@ -35,22 +35,22 @@
             <TextBlock Text="搜索发现" Foreground="Black" Margin="10,20,20,0"/>
             <controls:WrapPanel >
                 <controls:WrapPanel.Children>
-                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10" Tapped="Suggestion_Tapped">
                         <TextBlock Text="老妈烫饭" Foreground="DimGray" FontSize="14"/>
                     </Border>
-                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10" Tapped="Suggestion_Tapped">
                         <TextBlock Text="汉堡" Foreground="DimGray" FontSize="14"/>
                     </Border>
-                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10" Tapped="Suggestion_Tapped">
                         <TextBlock Text="重庆小面" Foreground="DimGray" FontSize="14"/>
                     </Border>
-                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10" Tapped="Suggestion_Tapped">
                         <TextBlock Text="浙江工业大学" Foreground="DimGray" FontSize="14"/>
                     </Border>
-                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10">
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10" Tapped="Suggestion_Tapped">
                         <TextBlock Text="荷叶饭" Foreground="DimGray" FontSize="14"/>
                     </Border>
-                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10">
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10" Tapped="Suggestion_Tapped">
                         <TextBlock Text="肯德基宅急送" Foreground="DimGray" FontSize="14"/>
                     </Border>
                     <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10">
@@ -63,25 +63,25 @@
             <TextBlock Text="搜索记录" Foreground="Black" Margin="10,20,20,0"/>
             <controls:WrapPanel >
                 <controls:WrapPanel.Children>
-                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10" Tapped="Suggestion_Tapped">
                         <TextBlock Text="老妈烫饭" Foreground="DimGray" FontSize="14"/>
                     </Border>
-                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10" Tapped="Suggestion_Tapped">
                         <TextBlock Text="汉堡" Foreground="DimGray" FontSize="14"/>
                     </Border>
-                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10" Tapped="Suggestion_Tapped">
                         <TextBlock Text="重庆小面" Foreground="DimGray" FontSize="14"/>
                     </Border>
-                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10">
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="15,5" Margin="10" Tapped="Suggestion_Tapped">
                         <TextBlock Text="浙江工业大学" Foreground="DimGray" FontSize="14"/>
                     </Border>
-                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10">
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10" Tapped="Suggestion_Tapped">
                         <TextBlock Text="荷叶饭" Foreground="DimGray" FontSize="14"/>
                     </Border>
-                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10">
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10" Tapped="Suggestion_Tapped">
                         <TextBlock Text="肯德基宅急送" Foreground="DimGray" FontSize="14"/>
                     </Border>
-                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10">
+                    <Border Background="WhiteSmoke" CornerRadius="15" Padding="10,5" Margin="10" Tapped="Suggestion_Tapped">
                         <TextBlock Text="老爹炒饭" Foreground="DimGray" FontSize="14"/>
                     </Border>
 

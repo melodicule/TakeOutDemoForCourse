@@ -22,15 +22,14 @@ namespace TakeoutDemo
     /// <summary>
     /// 可用于自身或导航至 Frame 内部的空白页。
     /// </summary>
-    public sealed partial class SearchBox : Page
+    public sealed partial class SearchResult : Page
     {
-        public SearchBox()
+        public SearchResult()
         {
             this.InitializeComponent();
-            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
         }
 
-        private void BackToHome_Tapped(object sender, TappedRoutedEventArgs e)
+        private void Back_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Frame.GoBack();
         }
@@ -40,27 +39,6 @@ namespace TakeoutDemo
             iconBack.Foreground = new SolidColorBrush(Colors.LightSkyBlue);
             await Task.Delay(100);
             iconBack.Foreground = new SolidColorBrush(Colors.White);
-        }
-
-        private void Search()
-        {
-            Frame.Navigate(typeof(SearchResult));
-        }
-
-        private void SymbolIcon_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(tbWord.Text))
-            {
-                Search();
-            }
-        }
-
-        private void Suggestion_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Border border = sender as Border;
-            TextBlock text = border.Child as TextBlock;
-            tbWord.Text = text.Text;
-            Search();
         }
     }
 }

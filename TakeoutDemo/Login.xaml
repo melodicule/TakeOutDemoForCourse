@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="White" FontSize="20" RequestedTheme="Light">
+    Background="White" FontSize="20" RequestedTheme="Light" Name="pg">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -37,8 +37,8 @@
             <TextBlock Text="欢迎登录海牛外卖点餐系统" FontSize="24" Foreground="DodgerBlue" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Border>
 
-        <TextBox Grid.Row="3"  Margin="30, 15" Name="inputUid" Height="auto" PlaceholderText="用户名/手机号" FontSize="20" VerticalContentAlignment="Center" />
-        <PasswordBox Grid.Row="4" Margin="30, 15" Name="inputPasw" Background="Transparent" PlaceholderText="密码" FontSize="20" VerticalContentAlignment="Center"/>
+        <TextBox Grid.Row="3"  Margin="30, 15" Text="{Binding ElementName=pg, Path=UserName, Mode=TwoWay}" Height="auto" PlaceholderText="用户名/手机号" FontSize="20" VerticalContentAlignment="Center" />
+        <PasswordBox Grid.Row="4" Margin="30, 15" Password="{Binding ElementName=pg, Path=Password, Mode=TwoWay}" Background="Transparent" PlaceholderText="密码" FontSize="20" VerticalContentAlignment="Center"/>
 
         <Grid Grid.Row="5">
             <Grid.ColumnDefinitions>
@@ -46,8 +46,8 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Content="登录" FontSize="20" Width="150" HorizontalAlignment="Center"/>
-            <Button Content="注册" Grid.Column="1" FontSize="20" Width="150" HorizontalAlignment="Center"/>
+            <Button Content="登录" FontSize="20" Width="150" HorizontalAlignment="Center" Click="Login_Click" Name="btLogin" IsEnabled="False"/>
+            <Button Content="注册" Grid.Column="1" FontSize="20" Width="150" HorizontalAlignment="Center" Click="SignUp_Click"/>
         </Grid>
 
         <RichTextBlock Grid.Row="6" HorizontalAlignment="Center" FontSize="14" VerticalAlignment="Bottom" Margin="0, 20">
